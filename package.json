@@ -1,0 +1,13 @@
+{
+  "name": "jazzRepository",
+  "version": "0.0.1",
+  "private": true,
+  
+  "dependencies": {
+    "express": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "passport-twitter": "*",
+    "connect-ensure-login": "*"
+  }
+}
