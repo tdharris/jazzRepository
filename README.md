@@ -1,4 +1,4 @@
-jazzRepository
-==============
+A social snippet sharing application
+====================================
 
-jazzRepository
+- facebook authentication using passportjs
