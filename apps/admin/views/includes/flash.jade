@@ -1,5 +1,0 @@
-if (typeof messages != 'undefined')
-	for message in messages
-		.alert(class= 'alert-#{message.type}')
-			button.close(type="button", data-dismiss="alert") ×
-			strong #{message.text}

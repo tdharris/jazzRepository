@@ -1,45 +1,20 @@
-var express = require('express')
-  , http = require('http')
-  , path = require('path')
-  , lessMiddleware = require('less-middleware')
-  , config = require('./config')
-  , flash = require('connect-flash');
+var Hapi = require('hapi');
 
-var passport = require('passport');
+var snippets = require('./routes/snippets');
+var types = require('hapi').Types;
 
-require('express-namespace');
+process.env.PORT = 3000;
+var config = { };
+var server = new Hapi.Server('0.0.0.0', parseInt(process.env.PORT, 10), config);
+server.pack.require({ lout: { endpoint: '/docs' } }, function (err) {
 
-var app = express();
-
-app.configure(function(){
-  app.set('port', process.env.PORT || 5000);
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.session({ secret: 'snippet share' }));
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(flash());
-  app.use(lessMiddleware({
-    src: __dirname + '/public',
-    compress: true
-  }));
-  app.use(express.static(path.join(__dirname, 'public')));
+    if (err) {
+        console.log('Failed loading plugins');
+    }
 });
 
-// locals
-require('./apps/locals')(app);
+server.addRoutes(snippets);
 
-// Routes
-require('./apps/common')(app);
-require('./apps/authentication')(app);
-require('./apps/admin')(app);
-
-
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port') + " in " + app.settings.env);
-});
+server.start(
+	console.log('Server listening on port: ' + process.env.PORT)
+);
