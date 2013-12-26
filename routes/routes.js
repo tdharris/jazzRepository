@@ -1,14 +1,20 @@
 var jade = require('jade');
 
-// Asset handling with Hapi - hapikachu
 var getHome = {
 	handler: function(request) {
 		request.reply.view('index', { title: 'Hello', message: 'there!'});
 	}
 };
 
+var getLibrary = {
+	handler: function(request) {
+		request.reply.view('library', { title: 'Hello', message: 'there!'});
+	}
+};
+
 module.exports = [
     { method: 'GET', path: '/', config: getHome },
+    { method: 'GET', path: '/library', config: getLibrary },
     {
 	    method: 'GET',
 	    path: '/{path*}',

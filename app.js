@@ -27,4 +27,3 @@ server.addRoutes(routes);
 server.start(
 	console.log("Server started at " + server.info.uri)
 );
-
