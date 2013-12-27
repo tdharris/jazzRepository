@@ -1,35 +1,51 @@
-.navbar.navbar-inverse
-  .navbar-header
-    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
-    a.navbar-brand(href='/') jazzRepository
-  .navbar-collapse.collapse
-    ul.nav.navbar-nav
-      li
-        a(href='#') About
-      li.active
-        a(href='library') Library
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
-          | My Book 
-          b.caret
-        ul.dropdown-menu
-          li
-            a(href='#') New Snippet
-          li
-            a(href='#') My Snippets
-          li.divider
-          li.dropdown-header My Book
-          li
-            a(href='#') Favorites
-          li
-            a(href='#') List #1
-    div.col-sm-4.col-md-4.pull-right
-      form.navbar-form(role='search')
-        .input-group
-            input#srch-term.form-control(type='text', placeholder='Search', name='srch-term')
-            .input-group-btn
-              button.btn.btn-default(type='submit')
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      a.navbar-brand(href='/') 
+        b jazzRepository
+      a.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
+        span.glyphicon.glyphicon-chevron-down
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li
+          a(href='#') About
+        li.active
+          a(href='library') Library
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            | My Book 
+            b.caret
+          ul.dropdown-menu
+            li
+              a(href='#') New Snippet
+            li
+              a(href='#') My Snippets
+            li.divider
+            li.dropdown-header My Book
+            li
+              a(href='#') Favorites
+            li
+              a(href='#') List #1
+      ul.nav.pull-right.navbar-nav
+        li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
                 i.glyphicon.glyphicon-search
+              ul.dropdown-menu.search
+                form.navbar-form(role='search')
+                  .input-group
+                      input#srch-term.form-control(type='text', placeholder='Search', name='srch-term')
+                      .input-group-btn
+                        button.btn.btn-default(type='submit')
+                          i.glyphicon.glyphicon-search
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.glyphicon.glyphicon-user
+                i.glyphicon.glyphicon-chevron-down
+              ul.dropdown-menu
+                li
+                  a(href='#') Login
+                li
+                  a(href='#') Profile
+                li.divider
+                li
+                  a(href='#') About  

@@ -6,10 +6,10 @@ append css
       display: inline;
       min-height: 100%;
       max-height: 100%;
-      min-width: 500px;
-      max-width: 500px;
+      min-width: 525px;
+      max-width: 525px;
       padding: 0;
-      margin: 0.5% 0.5%;
+      margin: 0.5% 1.2%;
       color: black;
     }
     .badge {
@@ -26,108 +26,78 @@ append css
     .thumbnail>img {
       margin: 0;
     }
-    .panel {
-      margin: 0 3.5%;
-    }
 
 block content    
   block main
     .container
       include includes/navbar
       include includes/filterPanel
+        div.row-fluid   
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              //- i.glyphicon.glyphicon-bookmark.pull-right
+              div.ribbon--corner--nw.ribbon--green
+                div.ribbon New
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.label.label-danger blues
+                span.text-muted.pull-right Kenny Garrett
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Miles Davis
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Joe Henderson
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Sonny Rollins
           div.row-fluid
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                //- i.glyphicon.glyphicon-bookmark.pull-right
-                div.ribbon--corner--nw.ribbon--green
-                  div.ribbon New
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    //- data-style='btn-primary',
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Kenny Garrett
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Miles Davis
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Joe Henderson
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Sonny Rollins
-            div.row-fluid
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Kenny Garrett
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Miles Davis
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Joe Henderson
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Sonny Rollins
-            div.col-xs-6.col-sm-4
-              div.thumbnail
-                div.badge.pull-right.count 8
-                img(src="http://placehold.it/500x100" alt="...")
-                div.caption
-                  select.selectpicker(multiple)
-                    option Option1
-                    option Option2
-                    option Option3
-                  span.text-muted.pull-right Sonny Rollins
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Kenny Garrett
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Miles Davis
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Joe Henderson
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Sonny Rollins
+          div.col-xs-6.col-sm-4
+            div.thumbnail
+              div.badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              div.caption
+                span.label.label-primary ii-V
+                span.text-muted.pull-right Sonny Rollins

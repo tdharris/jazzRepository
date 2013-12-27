@@ -47,31 +47,31 @@ function addSnippet(request) {
 var snippets = [{
         id: 1,
         artist: 'Kenny Garrett',
-        type: 'ii-V'
+        tags: ['ii-V']
     },
     {
         id: 2,
         artist: 'Miles Davis',
-        type: 'blues'
+        tags: ['blues']
     },
     {
         id: 3,
         artist: 'Joe Henderson',
-        type: 'sus'
+        tags: ['sus']
     },
     {
         id: 4,
         artist: 'Sonny Rollins',
-        type: 'ii-V'
+        tags: ['ii-V']
     },
     {
         id: 5,
         artist: 'Kenny Garrett',
-        type: 'ii-V'
+        tags: ['ii-V']
     },
     {
         id: 6,
         artist: 'Kenny Garrett',
-        type: 'ii-V'
+        tags: ['ii-V']
     }
 ];
