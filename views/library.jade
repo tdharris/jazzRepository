@@ -1,8 +1,7 @@
 extends layout
-
 append css 
   style.
-    .col-xs-6.col-sm-4 {
+    .col-sm-6.col-xs-6.col-md-6.ng-scope  {
       display: inline;
       min-height: 100%;
       max-height: 100%;
@@ -27,77 +26,25 @@ append css
       margin: 0;
     }
 
-block content    
+block head 
+  script.
+    $(document).ready(function() {
+
+    });  
+block content  
   block main
     .container
       include includes/navbar
       include includes/filterPanel
-        div.row-fluid   
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              //- i.glyphicon.glyphicon-bookmark.pull-right
-              div.ribbon--corner--nw.ribbon--green
-                div.ribbon New
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.label.label-danger blues
-                span.text-muted.pull-right Kenny Garrett
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Miles Davis
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Joe Henderson
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Sonny Rollins
-          div.row-fluid
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Kenny Garrett
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Miles Davis
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Joe Henderson
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Sonny Rollins
-          div.col-xs-6.col-sm-4
-            div.thumbnail
-              div.badge.pull-right.count 8
-              img(src="http://placehold.it/525x125" alt="...")
-              div.caption
-                span.label.label-primary ii-V
-                span.text-muted.pull-right Sonny Rollins
+        div(ng-app="snippetsLib")
+          div(ng-controller="SnippetsCtrl")
+            .col-sm-6.col-xs-6.col-md-6(ng-repeat="actor in Snippets.library")
+              .thumbnail
+                .ribbon--corner--nw.ribbon--green
+                  .ribbon New
+                .badge.pull-right.count 8
+                img(src="http://placehold.it/525x125" alt="...")
+                .caption
+                  span.label.label-primary {{actor.tags}}
+                  span.text-muted.pull-right {{actor.artist}}
+                  

@@ -8,38 +8,7 @@ var getHome = {
 
 var getLibrary = {
 	handler: function(request) {
-		var snippets = [{
-		        id: 1,
-		        artist: 'Kenny Garrett',
-		        tags: ['ii-V']
-		    },
-		    {
-		        id: 2,
-		        artist: 'Miles Davis',
-		        tags: ['blues']
-		    },
-		    {
-		        id: 3,
-		        artist: 'Joe Henderson',
-		        tags: ['sus']
-		    },
-		    {
-		        id: 4,
-		        artist: 'Sonny Rollins',
-		        tags: ['ii-V']
-		    },
-		    {
-		        id: 5,
-		        artist: 'Kenny Garrett',
-		        tags: ['ii-V']
-		    },
-		    {
-		        id: 6,
-		        artist: 'Kenny Garrett',
-		        tags: ['ii-V']
-		    }
-		];
-		request.reply.view('library', { title: 'Snippets Library', snips: snippets });
+		request.reply.view('library');
 	}
 };
 
