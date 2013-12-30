@@ -18,30 +18,30 @@ function getSnippets(request) {
 
 function findSnippets(name) {
 
-    return snippets.filter(function(product) {
-        return product.name.toLowerCase() === name.toLowerCase();
+    return snippets.filter(function(snippet) {
+        return snippet.name.toLowerCase() === name.toLowerCase();
     });
 }
 
 function getSnippet(request) {
 
-    var product = snippets.filter(function(p) {
+    var snippet = snippets.filter(function(p) {
         return p.id === parseInt(request.params.id);
     }).pop();
 
-    request.reply(product);
+    request.reply(snippet);
 }
 
 function addSnippet(request) {
 
-    var product = {
+    var snippet = {
         id: snippets[snippets.length - 1].id + 1,
         name: request.payload.name
     };
 
-    snippets.push(product);
+    snippets.push(snippet);
 
-    request.reply(product).code(201).header('Location', '/snippets/' + product.id);
+    request.reply(snippet).code(201).header('Location', '/snippets/' + snippet.id);
 }
 
 var snippets = [{

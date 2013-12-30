@@ -24,6 +24,13 @@ server.views({
 server.addRoutes(snippets);
 server.addRoutes(routes);
 
+server.on('request', function (request, event, tags) {
+    console.log('Req from ' + request.info.remoteAddress + ' (' + request.method + ') ' + request.path )
+    if (tags.error && tags.state) {
+        console.error(event);
+    }
+});
+
 server.start(
 	console.log("Server started at " + server.info.uri)
 );

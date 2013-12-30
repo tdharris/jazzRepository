@@ -1,50 +1,35 @@
 extends layout
-append css 
-  style.
-    .col-sm-6.col-xs-6.col-md-6.ng-scope  {
-      display: inline;
-      min-height: 100%;
-      max-height: 100%;
-      min-width: 525px;
-      max-width: 525px;
-      padding: 0;
-      margin: 0.5% 1.2%;
-      color: black;
-    }
-    .badge {
-      position:absolute;
-      top:10px; /*36%*/
-      right:10px; /*0%*/
-    }
-    .bootstrap-select {
-      margin-bottom: 0;
-    }
-    .selectpicker {
-      font-size: 1em;
-    }
-    .thumbnail>img {
-      margin: 0;
-    }
 
-block head 
-  script.
-    $(document).ready(function() {
-
-    });  
+block head   
 block content  
-  block main
-    .container
-      include includes/navbar
-      include includes/filterPanel
-        div(ng-app="snippetsLib")
-          div(ng-controller="SnippetsCtrl")
-            .col-sm-6.col-xs-6.col-md-6(ng-repeat="actor in Snippets.library")
-              .thumbnail
-                .ribbon--corner--nw.ribbon--green
-                  .ribbon New
-                .badge.pull-right.count 8
-                img(src="http://placehold.it/525x125" alt="...")
-                .caption
-                  span.label.label-primary {{actor.tags}}
-                  span.text-muted.pull-right {{actor.artist}}
-                  
+  .container
+    include includes/navbar
+    include includes/filterPanel
+      div(ng-app="snippetsLib")
+        div(ng-controller="SnippetsCtrl")
+          .col-sm-6.col-xs-6.col-md-6(ng-repeat="snippet in Snippets")
+            .thumbnail
+              .ribbon--corner--nw.ribbon--green
+                .ribbon New
+              .badge.pull-right.count 8
+              img(src="http://placehold.it/525x125" alt="...")
+              .caption
+                span.label.label-primary {{snippet.tags}}
+                span.text-muted.pull-right {{snippet.artist}}
+    ul.pagination
+      li.disabled
+        a(href='#') «
+      li.active
+        a(href='#')
+          | 1
+          span.sr-only (current)
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') 4
+      li
+        a(href='#') 5
+      li
+        a(href='#') »
