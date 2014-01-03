@@ -4,7 +4,7 @@ myApp.factory('snippetsFactory', function($http) {
 	return {
       getSnippetsAsync: function(callback) {
       	$( "div.loader" ).last().addClass( "loading-overlay" );
-		$http.get('snippets').success(callback);
+		    $http.get('snippets').success(callback);
       }
   };
 });
@@ -12,7 +12,7 @@ myApp.factory('snippetsFactory', function($http) {
 myApp.controller('SnippetsCtrl', function($scope, snippetsFactory) {
   snippetsFactory.getSnippetsAsync(function(results) {
   	$( "div.loader" ).last().removeClass( "loading-overlay" );
-	console.log('SnippetsCtrl async returned value: ' + results);
-	$scope.Snippets = results;
+  	console.log('SnippetsCtrl async returned value: ' + results);
+  	$scope.Snippets = results;
   });
 });

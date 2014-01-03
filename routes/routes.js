@@ -12,9 +12,16 @@ var getLibrary = {
 	}
 };
 
+var getNewSnippet = {
+	handler: function(request) {
+		request.reply.view('newSnippet');
+	}
+}
+
 module.exports = [
     { method: 'GET', path: '/', config: getHome },
     { method: 'GET', path: '/library', config: getLibrary },
+    { method: 'GET', path: '/newSnippet', config: getNewSnippet },
     {
 	    method: 'GET',
 	    path: '/{path*}',
@@ -23,5 +30,3 @@ module.exports = [
 	    }
 	}
 ];
-
-

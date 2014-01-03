@@ -73,5 +73,155 @@ var snippets = [{
         id: 6,
         artist: 'Kenny Garrett',
         tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 2,
+        artist: 'Miles Davis',
+        tags: ['blues']
+    },
+    {
+        id: 3,
+        artist: 'Joe Henderson',
+        tags: ['sus']
+    },
+    {
+        id: 4,
+        artist: 'Sonny Rollins',
+        tags: ['ii-V']
+    },
+    {
+        id: 5,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
+    },
+    {
+        id: 6,
+        artist: 'Kenny Garrett',
+        tags: ['ii-V']
     }
 ];

@@ -17,8 +17,13 @@ body {
   min-width: 525px;
   max-width: 525px;
   padding: 0;
-  margin: 0.5% 1.2%;
+  margin: 1.2% 1.2%;
   color: black;
+}
+.selectable:hover {
+  cursor: pointer;
+  text-decoration: none;
+
 }
 .badge {
   position:absolute;
@@ -31,8 +36,29 @@ body {
 .selectpicker {
   font-size: 1em;
 }
-.thumbnail>img {
+.thumbnail {
   margin: 0;
+}
+.form-section {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+img.maxheightTab {
+  max-height: 150px;
+  margin: 0 auto;
+}
+.dropzone {
+  text-align: center;
+  margin: 0 auto;
+}
+.opacity {
+  opacity: 0.5;
+}
+.dz-clickable {
+  margin: 0 15px;
+}
+ul.nav-tabs {
+  margin-bottom: 20px;
 }
 
 /* Loading CSS Spinner */

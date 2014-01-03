@@ -1,15 +1,16 @@
 .navbar.navbar-inverse.navbar-fixed-top
   .container
     .navbar-header
-      a.navbar-brand(href='/') 
+      a.navbar-brand(href='/' ng-class="{ active: isActive('/') }") 
         b jazzRepository
+        i.glyphicon.glyphicon-cloud(style='margin-left: 5px;')
       a.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
         span.glyphicon.glyphicon-chevron-down
     .navbar-collapse.collapse
       ul.nav.navbar-nav
-        li
+        li(ng-class="{ active: isActive('/about') }")
           a(href='#') About
-        li.active
+        li(ng-class="{ active: isActive('/library') }")
           a(href='library') Library
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown')
@@ -17,7 +18,7 @@
             b.caret
           ul.dropdown-menu
             li
-              a(href='#') New Snippet
+              a(href='/newSnippet') New Snippet
             li
               a(href='#') My Snippets
             li.divider
