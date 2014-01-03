@@ -75,19 +75,27 @@ block content
                 p.help-block Please provide the following as it relates to the origins of the Snippet: who, where, when? Feel free to leave any sections blank if unknown or unavailable.
                 br
                 .form-group
-                  label.col-sm-1.control-label(for='inputArtist') Artist
                   .col-sm-3
-                    input#inputArtist.form-control(type='text', placeholder='Artist')
-                .form-group
-                  label.col-sm-1.control-label(for='inputSong') Song
+                    input#inputArtist.form-control(type='text' placeholder='Artist')
                   .col-sm-3
-                    input#inputSong.form-control(type='text', placeholder='Song Title')
-                  label.col-sm-1.control-label(for='inputAlbum') Album
+                    input#inputAlbum.form-control(type='text' placeholder='Album')
                   .col-sm-3
-                    input#inputAlbum.form-control(type='text', placeholder='Album Name')
-                  label.col-sm-1.control-label(for='inputYear') Year
-                  .col-sm-2
-                    input#inputYear.form-control(type='number', placeholder='Year')
+                    input#inputSong.form-control(type='text' placeholder='Song')
+                  .col-sm-1
+                    input#inputYear.form-control(type='text' placeholder='Year')
+                //-   label.col-sm-1.control-label(for='inputArtist') Artist
+                //-   .col-sm-3
+                //-     input#inputArtist.form-control(type='text')
+                //- .form-group
+                //-   label.col-sm-1.control-label(for='inputSong') Song
+                //-   .col-sm-3
+                //-     input#inputSong.form-control(type='text')
+                //-   label.col-sm-1.control-label(for='inputAlbum') Album
+                //-   .col-sm-3
+                //-     input#inputAlbum.form-control(type='text')
+                //-   label.col-sm-1.control-label(for='inputYear') Year
+                //-   .col-sm-2
+                //-     input#inputYear.form-control(type='number')
                 hr
                 h4 Media Links
                 p.help-block If possible, provide a link to the song where it can be heard:
@@ -111,14 +119,14 @@ block content
                   label.col-sm-2.control-label(for='inputArtist') Assign Tags
                   .col-sm-9
                     div.row-fluid
-                      select.selectpicker(multiple data-width="100%")
+                      select.selectpicker(multiple data-width="100%" data-style="btn-danger")
                         option Option1
                         option Option2
                         option Option3
                 .form-group
                   label.col-sm-2.control-label(for='inputArtist') Description
                   .col-sm-9
-                    textarea.form-control(rows="5")
+                    textarea.form-control(rows="5" placeholder='Why is this cool? What makes it tick?')
               button.btn.btn-default.pull-left(type='button' onclick='document.getElementById(\'n2\').click()') 
                 span.glyphicon.glyphicon-arrow-left 
                 |  Previous
