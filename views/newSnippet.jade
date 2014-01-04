@@ -8,130 +8,132 @@ block content
   .container
     include includes/navbar
     .container
-      form.form-horizontal(role='form' action='#')
-        ul#newSnippet.nav.nav-pills.nav-justified.nav-tabs
-          li.active
-            a#n1(href='#image', data-toggle='tab')
-              i.glyphicon.glyphicon-picture(style='font-size: 2em;')
-          li
-            a#n2(href='#info', data-toggle='tab')
-              i.glyphicon.glyphicon-user(style='font-size: 2em;')
-          li
-            a#n3(href='#tags', data-toggle='tab')
-              i.glyphicon.glyphicon-tags(style='font-size: 2em;')
-          #newSnippetContent.tab-content
-            #image.tab-pane.active.fade.in
-              div.form-section
-                h4 Create Image
-                p.help-block Consider the following options when creating the sheet-music:
-                .form-group
-                  .col-sm-3
-                    a(href='img/handwritten.jpg')
-                      div.row.text-center
-                        img.img-responsive.maxheightTab.img-thumbnail(src="img/handwritten.jpg" alt="...")
-                      div.caption
-                        h5.text-center Handwritten
-                  .col-sm-3
-                    a(href='https://www.youtube.com/watch?v=7KSyrX6GV-4')
-                      div.row.text-center
-                        img.img-responsive.maxheightTab.img-thumbnail(src="img/notateme.png" alt="...")
-                      div.caption
-                        h5.text-center NotateMe
-                  .col-sm-3
-                    a(href='http://www.finale.com/')
-                      div.row.text-center
-                        img.img-responsive.maxheightTab(src="img/finale.png" alt="...")
-                      div.caption
-                        h5.text-center Finale
-                  .col-sm-3
-                    a(href='http://www.sibelius.com/')
-                      div.row.text-center
-                        img.img-responsive.maxheightTab(src="img/sib.jpg" alt="...")
-                      div.caption
-                        h5.text-center Sibelius
-                hr
-                h4 Upload Image
-                p.help-block Please provide an image of the transcribed material:
-                .form-group
-                    div.dropzone.dz-clickable(action='#')
-                      .dz-default.dz-message
-                        i.glyphicon.glyphicon-upload.opacity(style='font-size: 6em')
-                        h4.text-center.opacity Drop files here to upload
-                        p.help-block.opacity (or click)
-                //- hr
-                //- h4 Thumbnail Preview
-                //- p.help-block Crop for thumbnail preview:
+      .panel.panel-default
+        .panel-body
+          form.form-horizontal(role='form' action='#')
+            ul#newSnippet.nav.nav-pills.nav-justified.nav-tabs
+              li.active
+                a#n1(href='#image', data-toggle='tab')
+                  i.glyphicon.glyphicon-picture(style='font-size: 2em;')
+              li
+                a#n2(href='#info', data-toggle='tab')
+                  i.glyphicon.glyphicon-user(style='font-size: 2em;')
+              li
+                a#n3(href='#tags', data-toggle='tab')
+                  i.glyphicon.glyphicon-tags(style='font-size: 2em;')
+              #newSnippetContent.tab-content
+                #image.tab-pane.active.fade.in
+                  div.form-section
+                    h4 Create Image
+                    p.help-block Consider the following options when creating the sheet-music:
+                    .form-group
+                      .col-sm-3
+                        a(href='img/handwritten.jpg')
+                          div.row.text-center
+                            img.img-responsive.maxheightTab.img-thumbnail(src="img/handwritten.jpg" alt="...")
+                          div.caption
+                            h5.text-center Handwritten
+                      .col-sm-3
+                        a(href='https://www.youtube.com/watch?v=7KSyrX6GV-4')
+                          div.row.text-center
+                            img.img-responsive.maxheightTab.img-thumbnail(src="img/notateme.png" alt="...")
+                          div.caption
+                            h5.text-center NotateMe
+                      .col-sm-3
+                        a(href='http://www.finale.com/')
+                          div.row.text-center
+                            img.img-responsive.maxheightTab(src="img/finale.png" alt="...")
+                          div.caption
+                            h5.text-center Finale
+                      .col-sm-3
+                        a(href='http://www.sibelius.com/')
+                          div.row.text-center
+                            img.img-responsive.maxheightTab(src="img/sib.jpg" alt="...")
+                          div.caption
+                            h5.text-center Sibelius
+                    hr
+                    h4 Upload Image
+                    p.help-block Please provide an image of the transcribed material:
+                    .form-group
+                        div.dropzone.dz-clickable(action='#')
+                          .dz-default.dz-message
+                            i.glyphicon.glyphicon-upload.opacity(style='font-size: 6em')
+                            h4.text-center.opacity Drop files here to upload
+                            p.help-block.opacity (or click)
+                    //- hr
+                    //- h4 Thumbnail Preview
+                    //- p.help-block Crop for thumbnail preview:
+                    //- .form-group
+                    //-   .col-sm-6
+
+                  button.btn.btn-default.pull-right(type='button' onclick='document.getElementById(\'n2\').click()')
+                    | Next  
+                    span.glyphicon.glyphicon-arrow-right
+
+
+                #info.tab-pane.fade
+                  div.form-section
+                    h4 General Information
+                    p.help-block Please provide the following as it relates to the origins of the Snippet: who, where, when? Feel free to leave any sections blank if unknown or unavailable.
+                    br
+                    .form-group
+                      .col-sm-3
+                        input#inputArtist.form-control(type='text' placeholder='Artist')
+                      .col-sm-3
+                        input#inputAlbum.form-control(type='text' placeholder='Album')
+                      .col-sm-3
+                        input#inputSong.form-control(type='text' placeholder='Song')
+                      .col-sm-1
+                        input#inputYear.form-control(type='text' placeholder='Year')
+                    //-   label.col-sm-1.control-label(for='inputArtist') Artist
+                    //-   .col-sm-3
+                    //-     input#inputArtist.form-control(type='text')
+                    //- .form-group
+                    //-   label.col-sm-1.control-label(for='inputSong') Song
+                    //-   .col-sm-3
+                    //-     input#inputSong.form-control(type='text')
+                    //-   label.col-sm-1.control-label(for='inputAlbum') Album
+                    //-   .col-sm-3
+                    //-     input#inputAlbum.form-control(type='text')
+                    //-   label.col-sm-1.control-label(for='inputYear') Year
+                    //-   .col-sm-2
+                    //-     input#inputYear.form-control(type='number')
+                    hr
+                    h4 Media Links
+                    p.help-block If possible, provide a link to the song where it can be heard:
+                    .form-group
+                      .col-sm-7
+                        .input-prepend
+                          span.add-on(width='30px', height='30px')
+                            i.glyphicon.glyphicon-music
+                          input#inputYoutubeURL.form-control(type='text', placeholder='YouTube URL'))
+
+                  button.btn.btn-default.pull-left(type='button' onclick='document.getElementById(\'n1\').click()') 
+                    span.glyphicon.glyphicon-arrow-left 
+                    |  Previous
+                  button.btn.btn-default.pull-right(type='button' onclick='document.getElementById(\'n3\').click()')
+                    | Next  
+                    span.glyphicon.glyphicon-arrow-right
+                  
+                #tags.tab-pane.fade
+                  div.form-section
+                    .form-group
+                      label.col-sm-2.control-label(for='inputArtist') Assign Tags
+                      .col-sm-9
+                        div.row-fluid
+                          select.selectpicker(multiple data-width="100%" data-style="btn-danger")
+                            option Option1
+                            option Option2
+                            option Option3
+                    .form-group
+                      label.col-sm-2.control-label(for='inputArtist') Description
+                      .col-sm-9
+                        textarea.form-control(rows="5" placeholder='Why is this cool? What makes it tick?')
+                  button.btn.btn-default.pull-left(type='button' onclick='document.getElementById(\'n2\').click()') 
+                    span.glyphicon.glyphicon-arrow-left 
+                    |  Previous
+                  input.pull-right.btn.btn-default(type='button' type='submit') submit
+
                 //- .form-group
-                //-   .col-sm-6
-
-              button.btn.btn-default.pull-right(type='button' onclick='document.getElementById(\'n2\').click()')
-                | Next  
-                span.glyphicon.glyphicon-arrow-right
-
-
-            #info.tab-pane.fade
-              div.form-section
-                h4 General Information
-                p.help-block Please provide the following as it relates to the origins of the Snippet: who, where, when? Feel free to leave any sections blank if unknown or unavailable.
-                br
-                .form-group
-                  .col-sm-3
-                    input#inputArtist.form-control(type='text' placeholder='Artist')
-                  .col-sm-3
-                    input#inputAlbum.form-control(type='text' placeholder='Album')
-                  .col-sm-3
-                    input#inputSong.form-control(type='text' placeholder='Song')
-                  .col-sm-1
-                    input#inputYear.form-control(type='text' placeholder='Year')
-                //-   label.col-sm-1.control-label(for='inputArtist') Artist
-                //-   .col-sm-3
-                //-     input#inputArtist.form-control(type='text')
-                //- .form-group
-                //-   label.col-sm-1.control-label(for='inputSong') Song
-                //-   .col-sm-3
-                //-     input#inputSong.form-control(type='text')
-                //-   label.col-sm-1.control-label(for='inputAlbum') Album
-                //-   .col-sm-3
-                //-     input#inputAlbum.form-control(type='text')
-                //-   label.col-sm-1.control-label(for='inputYear') Year
-                //-   .col-sm-2
-                //-     input#inputYear.form-control(type='number')
-                hr
-                h4 Media Links
-                p.help-block If possible, provide a link to the song where it can be heard:
-                .form-group
-                  .col-sm-7
-                    .input-prepend
-                      span.add-on(width='30px', height='30px')
-                        i.glyphicon.glyphicon-music
-                      input#inputYoutubeURL.form-control(type='text', placeholder='YouTube URL'))
-
-              button.btn.btn-default.pull-left(type='button' onclick='document.getElementById(\'n1\').click()') 
-                span.glyphicon.glyphicon-arrow-left 
-                |  Previous
-              button.btn.btn-default.pull-right(type='button' onclick='document.getElementById(\'n3\').click()')
-                | Next  
-                span.glyphicon.glyphicon-arrow-right
-              
-            #tags.tab-pane.fade
-              div.form-section
-                .form-group
-                  label.col-sm-2.control-label(for='inputArtist') Assign Tags
-                  .col-sm-9
-                    div.row-fluid
-                      select.selectpicker(multiple data-width="100%" data-style="btn-danger")
-                        option Option1
-                        option Option2
-                        option Option3
-                .form-group
-                  label.col-sm-2.control-label(for='inputArtist') Description
-                  .col-sm-9
-                    textarea.form-control(rows="5" placeholder='Why is this cool? What makes it tick?')
-              button.btn.btn-default.pull-left(type='button' onclick='document.getElementById(\'n2\').click()') 
-                span.glyphicon.glyphicon-arrow-left 
-                |  Previous
-              input.pull-right.btn.btn-default(type='button' type='submit') submit
-
-            //- .form-group
-            //-   .col-sm-offset-2.col-sm-10
-            //-     input.type='button' btn.btn-default(type='submit') Sign in
+                //-   .col-sm-offset-2.col-sm-10
+                //-     input.type='button' btn.btn-default(type='submit') Sign in
